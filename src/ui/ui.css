@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish";
+  border: none;
+  outline: none;
+}
+#root {
+  max-width: 1440px;
+  display: block;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+:root {
+  --color: #ed165f;
+  --grid: 3;
+  --gridHome: 4;
+}
+.btn {
+  background: var(--color);
+  border-radius: 6px;
+}
+.title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.title-1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+.text-1 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #000000;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 300px 80%;
+  position: relative;
+  overflow: hidden;
+  transition: grid-template-columns 0.4s ease-in-out;
+}
+.saidbar {
+  background: red;
+  transition: all 0.4s ease-in-out;
+}
+.content {
+  background: cyan;
+}
+
+.layout_btn {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  padding: 20px;
+  color: wheat;
+  display: none;
+}
+.layout.active {
+  grid-template-columns: 0px 100%;
+}
+.layout.active .saidbar {
+  transform: translateX(-300px);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 15px 150px;
+}
+.nav_btn {
+  display: none;
+}
+.nav_item,
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+nav a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.search {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: 8px;
+  right: 3px;
+}
+.search input {
+  padding: 8px 25px 8px 8px;
+  width: 100%;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(var(--gridHome), calc(100% / var(--gridHome)));
+  gap: 50px;
+}
+.card {
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cardHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+}
+.cardHover button {
+  background: #ffffff;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  justify-content: center;
+  text-align: center;
+}
+.cardHoverItem button:nth-child(1) {
+  display: block;
+  margin: 13px auto;
+}
+.card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card:hover .cardHover {
+  opacity: 1;
+
+}
+.cardFooter {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.cardFooter h1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+.cardFooter p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+.sub{
+    position: relative;
+}
+.sub sub{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 15px;
+    height: 15px;
+    background: var(--color);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+}
+@media (max-width: 991px) {
+  :root {
+    --gridHome: 3;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --gridHome: 1;
+  }
+}
+@media (max-width: 556px) {
+  :root {
+    --gridHome: 1;
+  }
+}

@@ -10,6 +10,41 @@ export const initilaState = {
             color:'red',
             type:'men',
             img:"./img/1.png"
+        },
+        {
+            id:new Date().getTime(),
+            name:'Multicolored armless top',
+            price:10000,
+            size:'xl',
+            color:'red',
+            type:'men',
+            img:"./img/1.png"
+        },
+        {
+            id:new Date().getTime(),
+            name:'Multicolored armless top',
+            price:10000,
+            size:'xl',
+            color:'red',
+            type:'men',
+            img:"./img/1.png"
+        }, {
+            id:new Date().getTime(),
+            name:'Multicolored armless top',
+            price:10000,
+            size:'xl',
+            color:'red',
+            type:'men',
+            img:"./img/1.png"
+        }
+        , {
+            id:new Date().getTime(),
+            name:'Multicolored armless top',
+            price:10000,
+            size:'xl',
+            color:'red',
+            type:'men',
+            img:"./img/1.png"
         }
     ]
 }
